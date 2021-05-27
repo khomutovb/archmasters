@@ -36,6 +36,7 @@ header.active
 .header__container
     display: flex
     justify-content: space-between
+    height: 50px
 .header__container-right
     display: flex
     padding-top: 20px
@@ -66,6 +67,7 @@ header.active
     will-change: transform
     margin: auto
     margin-right: 0
+    min-height: 400px
 .menu-toggle__inner.active
     transform: translateX(0%)
 .nav a
@@ -94,7 +96,7 @@ header.active
     padding: 0 16px
 .first__section
     position: relative
-    background-image: url(/img/firstscreen_banner.jpg)
+    background-image: url(../img/firstscreen_banner.jpg)
     height: 100vh
     width: 100%
     background-position: center
@@ -248,6 +250,7 @@ header.active
     margin-top: 6px
 .team__slider-container
     display: none
+    margin: 0 5px
 .slider__nav
     display: flex
     justify-content: space-between
@@ -441,6 +444,8 @@ footer p
     header
         padding: 25px
 @media (max-width: 640px)
+    .container
+        padding: 0 25px
     .first__section-subtitle
         display: none
     .first__section-title
@@ -459,6 +464,8 @@ footer p
         width: 148px
         img
             max-width: 100%
+    .header__container
+        height: 38px
     .header__container-right
         padding-top: 10px
     .project__item
@@ -480,3 +487,12 @@ footer p
     margin: auto
     width: 100%
     object-fit: cover
+@media (max-height: 567px)
+    .nav
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        & a
+            margin: 5px
+    .social__icon-list
+        margin-top: 30px
