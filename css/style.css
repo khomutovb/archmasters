@@ -710,7 +710,17 @@ footer p {
   object-fit: cover;
 }
 
-@media (max-height: 567px) {
+@media (max-height: 490px) {
+  .nav a {
+    margin-top: 25px;
+    font-size: 20px;
+  }
+  .social__icon-list {
+    margin-top: 35px;
+  }
+}
+
+@media (max-height: 350px) {
   .nav {
     display: flex;
     flex-wrap: wrap;
