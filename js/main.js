@@ -28,4 +28,12 @@ $(document).ready(function () {
         nextArrow: '.second__section .next_arrow',
         prevArrow: '.second__section .previous_arrow',
     });
+    $(function () {
+        $('.contact__link').on('click', function (e) {
+            $(".burger, header, .menu-toggle, .menu-toggle__inner").toggleClass('active')
+            $("body").toggleClass('overflow')
+            e.preventDefault();
+            $('html,body').stop().animate({ scrollTop: $('#contact').offset().top }, 1200);
+        });
+    });
 });
