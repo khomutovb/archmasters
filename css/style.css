@@ -669,6 +669,9 @@ footer p {
   .header__logo img {
     max-width: 100%;
   }
+  .header__container {
+    height: 38px;
+  }
   .header__container-right {
     padding-top: 10px;
   }
