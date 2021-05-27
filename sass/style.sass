@@ -1,0 +1,482 @@
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    box-sizing: border-box
+    font-family: 'Cera Pro'
+    font-size: 14px
+    font-weight: 400
+a
+    text-decoration: none
+    color: #fff
+body
+    overflow: overlay
+body.overflow
+    overflow: hidden
+button
+    background: transparent
+    border: none
+    outline: none
+header
+    padding: 40px 60px
+    position: absolute
+    z-index: 999
+    width: 100%
+    top: 0
+.header__logo
+    height: 51px
+header.active
+    .contact__phone
+        opacity: 0
+        visibility: hidden
+    .lang__list
+        opacity: 0
+        visibility: hidden
+.header__container
+    display: flex
+    justify-content: space-between
+.header__container-right
+    display: flex
+    padding-top: 20px
+.menu-toggle
+    opacity: 0
+    visibility: hidden
+    transition: opacity .4s, visibility .4s
+    width: 100%
+    height: 100vh
+    background: rgba(0, 0, 0, .5)
+    position: fixed
+    top: 0
+    z-index: 998
+.menu-toggle.active
+    opacity: 1
+    visibility: visible
+.menu-toggle__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    transform: translateX(100%)
+    transition: transform .4s
+    padding: 40px 60px
+    width: 50%
+    height: 100%
+    background: #171918
+    will-change: transform
+    margin: auto
+    margin-right: 0
+.menu-toggle__inner.active
+    transform: translateX(0%)
+.nav a
+    display: block
+    font-size: 25px
+    margin-top: 45px
+    text-transform: uppercase
+    text-align: center
+    transition: color .4s
+    &:hover
+        color: #00892f
+.social__icon-list
+    display: flex
+    margin-top: 110px
+.social__icon-list a
+    width: 19px
+    height: 19px
+    margin: 0 14px
+    opacity: .5
+    transition: opacity .4s
+    &:hover
+        opacity: 1
+    & img
+        max-height: 100%
+.container
+    padding: 0 16px
+.first__section
+    position: relative
+    background-image: url(/img/firstscreen_banner.jpg)
+    height: 100vh
+    width: 100%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    min-height: 600px
+.first__section-overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .5
+    z-index: 0
+.contact__phone
+    height: 20px
+    margin-right: 80px
+    transition: opacity .4s, visibility .4s
+.lang__list a
+    display: block
+    cursor: pointer
+.lang__list a:not(:first-child)
+    margin-top: 25px
+.lang__list
+    margin-right: 80px
+    transition: opacity .4s, visibility .4s
+.lang__toogle
+    margin-bottom: 25px
+.lang__list-hidden
+    opacity: 0
+    visibility: hidden
+    transition: opacity .4s, visibility .4s
+    &.active
+        opacity: 1
+        visibility: visible
+.burger
+    cursor: pointer
+    display: block
+    width: 28px
+    height: 15px
+    position: relative
+.burger:before, .burger:after
+    content: ''
+    width: 28px
+    height: 1px
+    position: absolute
+    left: 0
+    background: #fff
+    transition: all 250ms ease-out
+    will-change: transform
+.burger:before
+    transform: translateY(-4px)
+.burger:after
+    transform: translateY(4px)
+.active.burger:before
+    transform: translateY(0) rotate(45deg)
+.active.burger:after
+    transform: translateY(0) rotate(-45deg)
+.first__section-content
+    position: relative
+    z-index: 1
+    max-width: 835px
+    margin-bottom: 8%
+    margin-left: -16%
+.first__section-title
+    color: #ffffff
+    font-size: 45px
+    font-weight: 500
+    font-style: normal
+    letter-spacing: normal
+    line-height: 64px
+    text-transform: uppercase
+.first__section-subtitle
+    color: #ffffff
+    font-size: 18px
+    font-weight: 300
+    line-height: 36px
+    margin-top: 44px
+.second__section-content
+    max-width: 950px
+    margin: 0 auto
+.section__title
+    color: #00892f
+    font-size: 10px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 3px
+    margin-bottom: 16px
+.section__subtitle
+    max-width: 142px
+    color: #111111
+    font-size: 25px
+    font-weight: 500
+    font-style: normal
+    text-transform: uppercase
+.about__us
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 81px 0 70px
+    margin: 0 50px
+.about__us-left
+    max-width: 60%
+.about__us-right
+    max-width: 60%
+    padding-left: 30px
+    & img
+        max-width: 100%
+        height: 100%
+.about__us .about__us-text
+    max-width: 322px
+    color: #707070
+    font-weight: 300
+    line-height: 26px
+    margin-top: 47px
+.our__team .our__team-text
+    color: #707070
+    font-weight: 300
+    line-height: 26px
+    max-width: 601px
+    margin-top: 47px
+.our__team-list
+    display: flex
+    justify-content: space-between
+    margin-top: 37px
+.our__team-item
+    max-width: 33.33333%
+.our__team-item:not(:last-child)
+    margin-right: 15px
+.our__team-item_photo
+    max-width: 305px
+    height: 305px
+    overflow: hidden
+.our__team-item_photo img
+    transition: transform .4s
+    max-width: 100%
+    object-fit: cover
+.our__team-item_photo:hover
+    & img
+        /** transform: scale(1.05) **/
+.our__team .person__name
+    font-size: 18px
+    font-weight: 500
+    margin-top: 16px
+.our__team .person__position
+    color: #707070
+    font-weight: 300
+    margin-top: 6px
+.team__slider-container
+    display: none
+.slider__nav
+    display: flex
+    justify-content: space-between
+    width: 220px
+    margin: 30px auto 0
+    & .slides-num
+        font-weight: 300
+        font-size: 14px
+    & .num__all
+        color: #707070
+    svg
+        width: 28px
+.team__slider-item
+    position: relative
+.team__slider-item::after
+    content: ""
+    display: block
+    top: 0
+    left: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0) 100%)
+    opacity: .5
+.team__slider-info
+    position: absolute
+    z-index: 2
+    bottom: 28px
+    left: 33px
+    color: #fff
+    & .person__position
+        color: #fff
+.project__list
+    display: flex
+    justify-content: space-between
+    margin-top: 67px
+.project__item
+    width: 50%
+    position: relative
+    z-index: 9
+    & img
+        max-width: 100%
+        height: 100%
+        object-fit: cover
+        width: 100%
+    &:hover
+        .project__item-content
+            transform: translateY(0px)
+        .project__item-more
+            opacity: 1
+.project__item-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .4
+    z-index: 0
+.project__item-content
+    position: absolute
+    bottom: 0
+    z-index: 9
+    bottom: 81px
+    left: 85px
+    transform: translateY(110px)
+    transition: transform .4s
+    will-change: transform
+.project__item-title
+    font-size: 25px
+    font-weight: 500
+    line-height: 27px
+    text-transform: uppercase
+    color: #fff
+.project__item-subtitle
+    margin-top: 34px
+    max-width: 261px
+    color: #ffffff
+    font-weight: 300
+    line-height: 28px
+.project__item-more
+    display: inline-block
+    margin-top: 58px
+    width: 202px
+    height: 52px
+    border: 1px solid #ffffff
+    text-align: center
+    line-height: 52px
+    text-transform: uppercase
+    opacity: 0
+    transition: opacity .4s, background .4s, color .4s
+    will-change: opacity
+    &:hover
+        background: #fff
+        color: #000
+.fourth__section
+    padding-top: 60px
+    padding-bottom: 152px
+.fourth__section-content
+    max-width: 950px
+    margin: 0 auto
+.fourth__section .section__subtitle
+    max-width: 255px
+.contact__way-list
+    max-width: 674px
+    margin: auto
+    margin-top: 104px
+    display: flex
+    justify-content: space-between
+.contact__way-item img
+    width: 30px
+    height: 30px
+.contact__way-item a
+    display: block
+    color: #707070
+    font-weight: 300
+    margin-top: 18px
+    transition: color .4s
+    &:hover
+        color: #000
+.contact__way-item
+    text-align: center
+footer
+    text-align: center
+    height: 44px
+    line-height: 44px
+    border-top: 1px solid #a9a9a9
+footer p
+    font-size: 10px
+    font-weight: 300
+@media (max-width: 1200px)
+    .first__section
+        justify-content: center
+        align-items: flex-start
+    .first__section-content
+        margin: 0
+        padding: 0px 60px
+    .first__section-title
+        font-size: 36px
+@media (max-width:1024px)
+    .project__item-more
+        opacity: 1
+    .project__item-content
+        bottom: 20px
+        transform: translateY(0px)
+    .first__section-title
+        line-height: 44px
+    .first__section-title br
+        display: none
+    .social__icon-list a
+        opacity: 1
+@media (max-width: 768px)
+    .about__us
+        flex-direction: column
+    .about__us-right
+        max-width: 100%
+        padding-top: 25px
+        padding-left: 0
+    .about__us-left
+        max-width: 100%
+    .about__us .about__us-text
+        max-width: 100%
+    .about__us-right img
+        width: 100%
+    .contact__phone
+        display: none
+    .lang__list
+        margin-right: 35px
+    .menu-toggle__inner
+        width: 100%
+    .our__team-list
+        display: none
+    .team__slider-container
+        display: block
+    .team__slider
+        margin: 0 -10px
+        margin-top: 32px
+    .team__slider .slick-slide
+        margin: 0 5px
+    .project__list
+        flex-wrap: wrap
+    .project__item
+        width: 100%
+    .first__section-title
+        font-size: 28px
+    .first__section-subtitle
+        font-size: 14px
+        line-height: 27px
+    .first__section
+        min-height: 400px
+    header
+        padding: 25px
+@media (max-width: 640px)
+    .first__section-subtitle
+        display: none
+    .first__section-title
+        font-size: 22px
+        line-height: 38px
+    .first__section-content
+        padding: 0 25px
+    .about__us
+        margin: 0
+        padding-top: 55px
+        padding-bottom: 32px
+    .team__slider .slick-slide img
+        width: 100%
+        height: auto
+    .header__logo
+        width: 148px
+        img
+            max-width: 100%
+    .header__container-right
+        padding-top: 10px
+    .project__item
+        min-height: 400px
+    .project__item-content
+        left: 25px
+        bottom: 50px
+    .fourth__section
+        padding-top: 30px
+        padding-bottom: 37px
+    .contact__way-list
+        flex-direction: column
+        margin-top: 55px
+    .contact__way-item:not(:last-child)
+        margin-bottom: 55px
+    .project__list
+        margin-top: 47px
+.slick-slide img
+    margin: auto
+    width: 100%
+    object-fit: cover
