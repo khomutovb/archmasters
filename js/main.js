@@ -35,5 +35,9 @@ $(document).ready(function () {
             e.preventDefault();
             $('html,body').stop().animate({ scrollTop: $('#contact').offset().top }, 1200);
         });
+        $('.filter-list-mobile #all-project').on('click', function (e) {
+            $(".filter-list-mobile").toggleClass('active')
+            $(".filter-item-hidden").slideToggle("slow")
+        });
     });
 });

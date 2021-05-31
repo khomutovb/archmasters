@@ -26,6 +26,7 @@ header
     top: 0
 .header__logo
     height: 51px
+    width: 202px
 header.active
     .contact__phone
         opacity: 0
@@ -33,6 +34,8 @@ header.active
     .lang__list
         opacity: 0
         visibility: hidden
+    .header__logo .cls-1, .header__logo .cls-2
+        fill: #fff !important
 .header__container
     display: flex
     justify-content: space-between
@@ -82,6 +85,9 @@ header.active
 .social__icon-list
     display: flex
     margin-top: 110px
+    align-items: center
+.social__icon-item:first-child
+    height: 25px
 .social__icon-list a
     width: 19px
     height: 19px
@@ -118,6 +124,27 @@ header.active
     height: 20px
     margin-right: 80px
     transition: opacity .4s, visibility .4s
+.black-style .contact__phone
+    color: #000
+.black-style .lang__list a
+    color: #000
+.black-style .burger:before, .black-style .burger:after
+    background: #000
+.black-style header.active .burger:before, .black-style header.active .burger:after,
+    background: #fff
+.black-style #contact
+    background-color: #171918
+    padding: 47px 0 56px
+.black-style footer
+    background-color: #171918
+    color: #fff
+    border-color: #fff
+.black-style .contact__way-list
+    margin-top: 56px
+.black-style #contact .section__subtitle
+    color: #fff
+.black-style #contact .contact__way-item a
+    color: #fff
 .lang__list a
     display: block
     cursor: pointer
@@ -251,6 +278,10 @@ header.active
 .team__slider-container
     display: none
     margin: 0 5px
+.team__slider-container .slick-slide img
+    margin: auto
+    width: 100%
+    object-fit: cover
 .slider__nav
     display: flex
     justify-content: space-between
@@ -348,7 +379,7 @@ header.active
         color: #000
 .fourth__section
     padding-top: 60px
-    padding-bottom: 152px
+    padding-bottom: 135px
 .fourth__section-content
     max-width: 950px
     margin: 0 auto
@@ -381,6 +412,100 @@ footer
 footer p
     font-size: 10px
     font-weight: 300
+.project__section
+    margin-top: 130px
+    padding: 49px 60px 0
+.filter-list
+    display: flex
+    align-items: center
+    margin-top: 33px
+.filter-item
+    margin-right: 86px
+    opacity: .5
+    transition: opacity .4s
+    cursor: pointer
+    &.active
+        opacity: 1
+    &:hover
+        opacity: 1
+.project__block
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 0 -3px
+    margin-top: 20px
+    margin-bottom: 60px
+.project__block-item
+    position: relative
+    display: block
+    flex-basis: calc(33.33333% - 6px)
+    max-width: calc(33.33333% - 6px)
+    height: 426px
+    margin: 3px 3px
+    overflow: hidden
+    & img
+        width: 100%
+        object-fit: cover
+        height: 100%
+    &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: #000
+        opacity: 0
+        transition: opacity .4s
+    &:hover
+        &::after
+            opacity: .5
+        .project__block-title
+            transform: translateY(0px)
+            opacity: 1
+            visibility: visible
+.project__block-title
+    display: block
+    position: absolute
+    bottom: 34px
+    left: 33px
+    right: 34px
+    z-index: 9
+    transform: translateY(80px)
+    opacity: 0
+    visibility: hidden
+    transition: transform .4s, opacity .4s, visibility .4s
+    & p
+        font-size: 25px
+        text-transform: uppercase
+        max-width: 280px
+.filter-list-mobile
+    display: none
+    margin-top: 20px
+    &.active #all-project::after
+        transform: rotate(-135deg)
+    & .filter-item-hidden
+        display: none
+
+    & #all-project
+        padding: 0
+        &::after
+            content: ""
+            border: solid black
+            border-width: 0 1px 1px 0
+            display: inline-block
+            padding: 2px
+            transform: rotate(45deg)
+            width: 3px
+            height: 3px
+            position: relative
+            left: 8px
+            top: -2px
+            transition: transform .4s
+    & .filter-item
+        padding: 26px 0
+        &:last-child
+            padding: 0
 @media (max-width: 1200px)
     .first__section
         justify-content: center
@@ -402,6 +527,17 @@ footer p
         display: none
     .social__icon-list a
         opacity: 1
+    .project__block-item
+        flex-basis: calc(50% - 6px)
+        max-width: calc(50% - 6px)
+        & .project__block-title
+            transform: translateY(0px)
+            opacity: 1
+            visibility: visible
+        &::after
+            opacity: .5
+    .filter-item
+        margin-right: 50px
 @media (max-width: 768px)
     .about__us
         flex-direction: column
@@ -443,6 +579,19 @@ footer p
         min-height: 400px
     header
         padding: 25px
+    .project__section
+        padding: 49px 25px 0
+    .project__block-item
+        max-height: 232px
+    .filter-list-desktop
+        display: none
+    .filter-list-mobile
+        display: block
+    .project__block
+        margin-top: 20px
+    .project__block-title p
+        font-size: 20px
+        max-width: 240px
 @media (max-width: 640px)
     .container
         padding: 0 25px
@@ -475,19 +624,27 @@ footer p
         bottom: 50px
     .fourth__section
         padding-top: 30px
-        padding-bottom: 37px
+        padding-bottom: 60px
     .contact__way-list
         flex-direction: column
-        margin-top: 55px
+        margin-top: 60px
     .contact__way-item:not(:last-child)
         margin-bottom: 55px
     .project__list
         margin-top: 47px
-.slick-slide img
-    margin: auto
-    width: 100%
-    object-fit: cover
-@media (max-height: 567px)
+    .project__block-item
+        flex-basis: 100%
+        max-width: 100%
+    .project__section
+        margin-top: 88px
+@media (max-height: 490px)
+    .nav
+        & a
+            margin-top: 25px
+            font-size: 20px
+    .social__icon-list
+        margin-top: 35px
+@media (max-height: 350px)
     .nav
         display: flex
         flex-wrap: wrap
