@@ -1,16 +1,20 @@
 $(document).ready(function () {
     if ($("#menu-toggle").length) {
         $(document).on('click', function (e) {
-            if ($(e.target).closest('.burger').length || $(e.target).hasClass('menu-toggle')) {
+            if ($(e.target).closest('.burger').length) {
                 $(".burger, header, .menu-toggle, .menu-toggle__inner").toggleClass('active')
                 $("body").toggleClass('overflow')
             }
+            $(".menu-toggle.active").click(function () {
+                $(".burger, header, .menu-toggle, .menu-toggle__inner").removeClass('active')
+                $("body").removeClass('overflow')
+            });
         })
         $(document).bind("keyup", null, function (event) {
             if (event.keyCode == 27) {
                 if ($("#header").hasClass("active")) {
-                    $(".burger, header, .menu-toggle, .menu-toggle__inner").toggleClass('active')
-                    $("body").toggleClass('overflow')
+                    $(".burger, header, .menu-toggle, .menu-toggle__inner").removeClass('active')
+                    $("body").removeClass('overflow')
                 }
             }
         })
