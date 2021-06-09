@@ -556,7 +556,6 @@ footer p
 .project__gallery-section
     margin-top: 130px
     padding: 49px 0 36px
-    height: calc(100vh - 130px)
 .project__gallery-section .slider__nav
     width: 370px
 .project__gallery-section .previous_arrow, .project__gallery-section .next_arrow
@@ -565,6 +564,18 @@ footer p
     font-weight: 400
 .slick-arrow
     cursor: pointer
+.project__gallery-img
+    display: none
+    width: 100%
+    padding: 0 25px
+    margin-top: 31px
+.project__gallery-img__item
+    &:not(:last-child)
+        margin-bottom: 25px
+
+@media (max-width:1400px)
+    .project__gallery-item
+        width: 768px
 @media (max-width: 1200px)
     .first__section
         justify-content: center
@@ -654,16 +665,10 @@ footer p
     .project__block-title p
         font-size: 20px
         max-width: 240px
-    .project__gallery-slider
-        padding: 0 25px
-    .project__gallery-item
-        width: 100%
-        min-height: initial
-        max-height: initial
-        margin: 0
-        margin-bottom: 25px
-        & img
-            height: initial
+    .project__gallery-slider, .slider__nav
+        display: none
+    .project__gallery-img
+        display: block
     .project__info
         padding-left: 25px
         flex-direction: column
@@ -673,9 +678,7 @@ footer p
         padding-left: 25px
     .project__gallery-section
         height: 100%
-        padding: 36px 0 36px
-        & .slider__nav
-            display: none
+        padding: 36px 0 25px
     .project__info-item:nth-child(1)
         margin-right: 0
     .project__info-item.location::before
