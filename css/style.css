@@ -285,7 +285,7 @@ header.active .header__logo .cls-1, header.active .header__logo .cls-2 {
   position: relative;
   z-index: 1;
   max-width: 835px;
-  margin-bottom: 8%;
+  margin-bottom: 16%;
   margin-left: -16%;
 }
 
@@ -297,14 +297,6 @@ header.active .header__logo .cls-1, header.active .header__logo .cls-2 {
   letter-spacing: normal;
   line-height: 64px;
   text-transform: uppercase;
-}
-
-.first__section-subtitle {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 36px;
-  margin-top: 44px;
 }
 
 .second__section-content {
@@ -419,6 +411,7 @@ header.active .header__logo .cls-1, header.active .header__logo .cls-2 {
   margin: auto;
   width: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .slider__nav {
@@ -953,10 +946,6 @@ footer p {
   .first__section-title {
     font-size: 28px;
   }
-  .first__section-subtitle {
-    font-size: 14px;
-    line-height: 27px;
-  }
   .first__section {
     min-height: 400px;
   }
@@ -1016,9 +1005,6 @@ footer p {
 @media (max-width: 640px) {
   .container {
     padding: 0 25px;
-  }
-  .first__section-subtitle {
-    display: none;
   }
   .first__section-title {
     font-size: 22px;
