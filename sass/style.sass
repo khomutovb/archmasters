@@ -665,7 +665,7 @@ footer p
         & img
             height: initial
     .project__info
-        padding-left: 36px
+        padding-left: 25px
         flex-direction: column
         & .project__info-item:nth-child(1)
             margin-bottom: 30px
@@ -676,6 +676,11 @@ footer p
         padding: 36px 0 36px
         & .slider__nav
             display: none
+    .project__info-item:nth-child(1)
+        margin-right: 0
+    .project__info-item.location::before
+        width: 23px
+        background-position: center
 @media (max-width: 640px)
     .container
         padding: 0 25px
